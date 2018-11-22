@@ -1,2 +1,68 @@
-.hello {
-  color: red; }
+@font-face {
+  font-family: "Brandon-bold";
+  src: url(../fonts/brandon_bld.otf); }
+
+@font-face {
+  font-family: "Brandon-light";
+  src: url(../fonts/brandon_light.otf); }
+
+@font-face {
+  font-family: "Brandon-medium";
+  src: url(../fonts/brandon_med.otf); }
+
+@font-face {
+  font-family: "Brandon-regular";
+  src: url(../fonts/brandon_reg.otf); }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+h1 {
+  font-family: "Brandon-bold";
+  font-size: 6.6rem;
+  text-transform: uppercase;
+  margin-bottom: 70px; }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  color: #ffffff; }
+  header p {
+    font-size: 32px;
+    font-family: "Brandon-light";
+    margin-bottom: 36px; }
+  header button {
+    height: 64px;
+    width: 240px;
+    font-family: "Brandon-bold";
+    font-size: 23px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background: none;
+    cursor: pointer; }
+
+.header__slider {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1; }
+  .header__slider img {
+    height: 100vh !important;
+    width: 100vw !important; }

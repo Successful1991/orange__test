@@ -3,7 +3,9 @@ var server = require('gulp-server-livereload');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
-
+var spritesmith = require('gulp.spritesmith');
+var buffer = require('gulp-buffer');
+var spritesmash = require('gulp-spritesmash');
 
 //--server--//
 gulp.task('server', function() {
@@ -36,4 +38,14 @@ gulp.task('browser-sync', function() {
 		server: {
 			baseDir: "./"
 		}});
+});
+
+gulp.task('sprite', function () {
+  return gulp.src('app/img/icon/*.png')
+    .pipe(spritesmith({
+      imgName: 'sprite.png',
+      cssName: 'sprite.css',
+    }))
+    .pipe(spritesmash())
+    .pipe(gulp.dest('app/img/sprite'));
 });
