@@ -14,6 +14,13 @@
   font-family: "Brandon-regular";
   src: url(../fonts/brandon_reg.otf);
 }
+
+@mixin d-flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -26,13 +33,18 @@ h1{
   text-transform: uppercase;
   margin-bottom: 70px;
 }
+h2{
+  font-family: "Brandon-light";
+  font-size: 6rem;
+  line-height: 1.4em;
+}
 header{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   color: #ffffff;
   p{
     font-size: 32px;
@@ -53,10 +65,110 @@ header{
 .header__slider{
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: -1;
   img{
     height: 100vh!important;
-    width: 100vw!important;
+    //max-width: 100vw!important;
   }
 }
+
+.team{
+  background: #000000;
+  color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 95px;
+  text-align: center;
+  &__title{
+    span{
+      font-family: "Brandon-bold";
+    }
+  }
+  &__subtitle,&__description{
+    font-family: Brandon-regular;
+    font-size: 22px;
+    color: #777777;
+    letter-spacing: -0.25px;
+  }
+  &__subtitle{
+    margin-bottom: 70px;
+  }
+  &__description{
+    color: #ebebeb;
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+  &__group{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto 45px;
+  }
+  &__employee{
+    height: auto;
+    width: 30%;
+    > div {
+      @include d-flex-center
+    }
+  }
+  &__image{
+    height: 235px;
+    width: 235px;
+    border: 7px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+  .icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin: 0 5px;
+  }
+}
+.employee{
+  &__name,&__position{
+    letter-spacing: -0.25px;
+    margin-bottom: 10px;
+  }
+  &__name{
+    font-family: "Brandon-bold";
+    font-size: 18px;
+  }
+  &__position{
+    font-family: "Brandon-regular";
+    font-size: 16px;
+  }
+}
+
+.icon{
+  @include d-flex-center;
+  i{
+    display: inline-block;
+  }
+  &-tw:hover{
+    background: #00aced;
+    border-color: #00aced;
+  }
+  &-fb:hover{
+    background: #3b5998;
+    border-color: #3b5998;
+  }
+  &-pi:hover{
+    background: #cb2028;
+    border-color: #cb2028;
+  }
+  &-gl:hover{
+    background: #d95232;
+    border-color: #d95232;
+  }
+
+}
+
+

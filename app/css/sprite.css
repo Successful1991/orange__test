@@ -17,37 +17,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 <i class="icon icon-home"></i>
 */
 .icon-Facebook {
-  background-image: url(sprite-1441a7909c.png);
+  background-image: url(../img/sprite/sprite-1441a7909c.png);
   background-position: -61px 0px;
   width: 11px;
   height: 19px;
 }
-.icon-Google+ {
-  background-image: url(sprite-1441a7909c.png);
+.icon-Google {
+  background-image: url(../img/sprite/sprite-1441a7909c.png);
   background-position: 0px -44px;
   width: 17px;
   height: 17px;
 }
 .icon-Mail-Icon {
-  background-image: url(sprite-1441a7909c.png);
+  background-image: url(../img/sprite/sprite-1441a7909c.png);
   background-position: -18px 0px;
   width: 27px;
   height: 18px;
 }
 .icon-Mobile-Icon {
-  background-image: url(sprite-1441a7909c.png);
+  background-image: url(../img/sprite/sprite-1441a7909c.png);
   background-position: 0px 0px;
   width: 18px;
   height: 29px;
 }
 .icon-Pinterest {
-  background-image: url(sprite-1441a7909c.png);
+  background-image: url(../img/sprite/sprite-1441a7909c.png);
   background-position: -45px 0px;
   width: 16px;
   height: 21px;
 }
 .icon-Twitter {
-  background-image: url(sprite-1441a7909c.png);
+  background-image: url(../img/sprite/sprite-1441a7909c.png);
   background-position: 0px -29px;
   width: 20px;
   height: 15px;
