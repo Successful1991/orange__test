@@ -28,13 +28,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 17px;
   height: 17px;
 }
-.icon-Mail-Icon {
+.icon-Mail {
   background-image: url(../img/sprite/sprite-1441a7909c.png);
   background-position: -18px 0px;
   width: 27px;
   height: 18px;
 }
-.icon-Mobile-Icon {
+.icon-Mobile {
   background-image: url(../img/sprite/sprite-1441a7909c.png);
   background-position: 0px 0px;
   width: 18px;

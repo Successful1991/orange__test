@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Brandon-bold";
-  src: url(../fonts/brandon_bld.otf); }
+  src: url(../fonts/BrandonGrotesque-Bold.woff); }
 
 @font-face {
   font-family: "Brandon-light";
-  src: url(../fonts/brandon_light.otf); }
+  src: url(../fonts/BrandonGrotesque-Light.woff); }
 
 @font-face {
   font-family: "Brandon-medium";
-  src: url(../fonts/brandon_med.otf); }
+  src: url(../fonts/BrandonGrotesque-Medium.woff); }
 
 @font-face {
   font-family: "Brandon-regular";
-  src: url(../fonts/brandon_reg.otf); }
+  src: url(../fonts/BrandonGrotesque-Regular.woff); }
 
 * {
   -webkit-box-sizing: border-box;
@@ -50,10 +50,11 @@ header {
   width: 100%;
   color: #ffffff; }
   header p {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-family: "Brandon-light";
     margin-bottom: 36px; }
   header button {
+    position: relative;
     height: 64px;
     width: 240px;
     font-family: "Brandon-bold";
@@ -61,11 +62,16 @@ header {
     color: #ffffff;
     border: 2px solid #ffffff;
     background: none;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+    header button:hover {
+      -webkit-animation: 0.2s buttonHover linear;
+              animation: 0.2s buttonHover linear; }
 
 .header__slider {
   position: absolute;
-  height: 100vh;
   width: 100%;
   z-index: -1; }
   .header__slider img {
@@ -74,21 +80,21 @@ header {
 .team {
   background: #000000;
   color: #ffffff;
-  padding-top: 100px;
-  padding-bottom: 95px;
+  padding: 100px 20px 95px;
   text-align: center; }
   .team__title span {
     font-family: "Brandon-bold"; }
   .team__subtitle, .team__description {
-    font-family: Brandon-regular;
-    font-size: 22px;
-    color: #777777;
-    letter-spacing: -0.25px; }
+    font-family: "Brandon-regular";
+    font-size: 2.2rem;
+    line-height: 1.2em;
+    letter-spacing: -0.25px;
+    color: #777777; }
   .team__subtitle {
     margin-bottom: 70px; }
   .team__description {
     color: #ebebeb;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1.3em; }
   .team__group {
     display: -webkit-box;
@@ -118,7 +124,7 @@ header {
     border: 7px solid #ffffff;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 15px; }
+    margin: 0 auto 15px; }
     .team__image img {
       height: 100%;
       width: auto; }
@@ -135,11 +141,126 @@ header {
 
 .employee__name {
   font-family: "Brandon-bold";
-  font-size: 18px; }
+  font-size: 1.8rem; }
 
 .employee__position {
   font-family: "Brandon-regular";
-  font-size: 16px; }
+  font-size: 1.6rem; }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 100px;
+  background: #7690c5;
+  color: #ffffff; }
+  footer form, footer .contact {
+    width: 470px; }
+  footer .contact__title span {
+    font-family: "Brandon-bold"; }
+  footer .contact__subtitle {
+    font-family: "Brandon-regular";
+    font-size: 2.2rem;
+    line-height: 1.2em;
+    letter-spacing: -0.25px;
+    font-size: 1.8rem;
+    margin-bottom: 50px; }
+  footer .contact__list {
+    -webkit-column-count: 2;
+            column-count: 2; }
+    footer .contact__list div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 40px;
+      font-size: 1.8rem;
+      font-family: "Brandon-regular"; }
+    footer .contact__list a {
+      color: #ffffff;
+      font-family: "Brandon-regular";
+      text-decoration: none; }
+  footer .contact__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px; }
+    footer .contact__icon i {
+      display: inline-block; }
+  footer form {
+    margin-bottom: 100px; }
+    footer form input {
+      width: 100%;
+      height: 50px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding-left: 15px;
+      margin-bottom: 28px; }
+      footer form input::-webkit-input-placeholder {
+        color: #bbbbbb;
+        font-size: 1.8rem;
+        font-family: "Brandon-medium"; }
+      footer form input::-ms-input-placeholder {
+        color: #bbbbbb;
+        font-size: 1.8rem;
+        font-family: "Brandon-medium"; }
+      footer form input::placeholder {
+        color: #bbbbbb;
+        font-size: 1.8rem;
+        font-family: "Brandon-medium"; }
+      footer form input:nth-of-type(2) {
+        margin-bottom: 18px; }
+    footer form textarea {
+      width: 100%;
+      height: 50px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding-left: 15px;
+      height: 210px;
+      padding-top: 15px; }
+      footer form textarea::-webkit-input-placeholder {
+        color: #bbbbbb;
+        font-size: 1.8rem;
+        font-family: "Brandon-medium"; }
+      footer form textarea::-ms-input-placeholder {
+        color: #bbbbbb;
+        font-size: 1.8rem;
+        font-family: "Brandon-medium"; }
+      footer form textarea::placeholder {
+        color: #bbbbbb;
+        font-size: 1.8rem;
+        font-family: "Brandon-medium"; }
+  footer .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 80px;
+    width: 100%;
+    font-family: "Brandon-medium";
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.25px; }
 
 .icon {
   display: -webkit-box;
@@ -165,3 +286,116 @@ header {
   .icon-gl:hover {
     background: #d95232;
     border-color: #d95232; }
+
+@-webkit-keyframes buttonHover {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes buttonHover {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.icon-facebook {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../img/icon/facebook.svg") no-repeat center; }
+
+.icon-twitter {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../img/icon/twitter.svg") no-repeat center; }
+
+.icon-google {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../img/icon/google.svg") no-repeat center; }
+
+.icon-pinterest {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../img/icon/icon.svg") no-repeat center; }
+
+.icon-mobile {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../img/icon/mobile.svg") no-repeat center; }
+
+.icon-mail {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../img/icon/mail.svg") no-repeat center; }
+
+@media screen and (max-width: 768px) {
+  header p {
+    font-size: 2.7rem; }
+  h1 {
+    font-size: 4.5rem; }
+  .team__image {
+    height: 150px;
+    width: 150px; }
+  footer form {
+    margin-bottom: 30px; }
+  footer .contact__list div {
+    margin-bottom: 10px; } }
+
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 8px; }
+  h1 {
+    font-size: 6.7vw; }
+  header p {
+    font-size: 5vw; }
+  .team {
+    padding: 40px 10px; }
+    .team__title {
+      font-size: 9vw; }
+    .team__subtitle {
+      font-size: 6vw; }
+    .team__group {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .team__employee {
+      width: auto;
+      margin-bottom: 30px; }
+  footer {
+    padding-top: 30px; }
+    footer form, footer .contact {
+      width: 90%; }
+    footer .contact__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-column-count: 1;
+              column-count: 1; } }
