@@ -1,5 +1,7 @@
 $(document).ready(function () {
   initSlider();
+  AOS.init();  //animation of blocks at the skroll, settings it is registered on blocks in html.
+
 });
 
 function initSlider() {
@@ -10,6 +12,11 @@ function initSlider() {
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 300,
-    arrows: false,
+    arrows: false
   })
+}
+
+function activePopup() {
+  var active =  $('.popup').hasClass('popupActive');
+  active? $('.popup').removeClass('popupActive'):$('.popup').addClass('popupActive');
 }

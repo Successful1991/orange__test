@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="app/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="app/css/sprite.css">
-	<link rel="stylesheet" href="app/css/main.css">
+	<link rel="stylesheet" href="app/css/index.css">
 	<title>Orange test</title>
 </head>
 <body>
@@ -22,8 +21,13 @@
 		</div>
 		<p data-aos="fade" data-aos-delay="200" data-aos-duration="2000">Can you build the website of my dreams?</p>
 		<h1 data-aos="fade" data-aos-delay="100" data-aos-duration="1500">Yup, we can do that.</h1>
-		<button type="button" data-aos="fade" data-aos-delay="500" data-aos-duration="1000">Learn More</button>
+		<button type="button" data-aos="fade" data-aos-delay="500" data-aos-duration="1000" onclick="activePopup()">Learn More</button>
 	</header>
+    <div class="popup">
+		<div class="popup__close" onclick="activePopup()"></div>
+		<h2>Здесь может быть ваша реклама</h2>
+		<p>или форма для регистрации</p>
+	</div>
 	<section class="team">
 		<h2 class="team__title" data-aos="zoom-in" data-aos-delay="0" >Amazing <span>Team</span></h2>
 		<p class="team__subtitle" data-aos="zoom-in" data-aos-delay="0" >These wonderful people make work enjoyable.</p>
@@ -74,22 +78,22 @@
 				bunch of people :)</p>
 			<div class="contact__list">
 				<div>
-					<span class="contact__icon"><i class="icon-mobile"></i></span>
+					<span class="contact__icon icon"><i class="icon-mobile"></i></span>
 					(416) 555-0000</div>
 				<div>
-					<span class="contact__icon"><i class="icon-twitter"></i></span>
+					<span class="contact__icon icon"><i class="icon-twitter"></i></span>
 				<a href="https://twitter.com/?lang=ru">@escape</a></div>
 				<div>
-					<span class="contact__icon"><i class="icon-Google"></i></span>
+					<span class="contact__icon icon"><i class="icon-google"></i></span>
 					<a href="https://plus.google.com/discover">plus.com/escape</a></div>
 				<div>
-					<span class="contact__icon"><i class="icon-mail"></i></span>
+					<span class="contact__icon icon"><i class="icon-mail"></i></span>
 					hello@escape.com</div>
 				<div>
-					<span class="contact__icon"><i class="icon-facebook"></i></span>
+					<span class="contact__icon icon"><i class="icon-facebook"></i></span>
 					<a href="https://www.facebook.com/">facebook.com/escape</a></div>
 				<div>
-					<span class="contact__icon"><i class="icon-pinterest"></i></span>
+					<span class="contact__icon icon"><i class="icon-pinterest"></i></span>
 					<a href="https://www.pinterest.com/">pinterest.com/escape</a></div>
 			</div>
 		</div>
@@ -100,10 +104,10 @@
 		</form>
 		<div class="copyright">© 2014 Escape by FreebiesXpress • Made In Toronto</div>
 	</footer>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>AOS.init();</script>
 	<script src="app/js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+@media screen and (max-width: 768px){
+  header p{
+    font-size: 2.7rem;
+  }
+  h1{
+    font-size: 4.5rem;
+  }
+  .team__image{
+    height: 150px;
+    width: 150px;
+  }
+  footer {
+    form {
+      margin-bottom: 30px;
+    }
+    .contact__list{
+      margin-bottom: 30px;
+      div{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px){
+  html{
+    font-size: 8px;
+  }
+  h1{
+    font-size: 6.7vw;
+  }
+  header p{
+    font-size: 5vw;
+  }
+  .team{
+    padding: 40px 10px;
+    &__title{
+      font-size: 9vw;
+    }
+    &__subtitle{
+      font-size: 6vw;
+    }
+    &__group {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__employee {
+      width: auto;
+      margin-bottom: 30px;
+    }
+  }
+  footer {
+    padding-top: 30px;
+    form, .contact {
+      width: 90%;
+    }
+    .contact__list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      column-count: 1;
+    }
+  }
+}

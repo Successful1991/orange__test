@@ -14,6 +14,65 @@
   font-family: "Brandon-regular";
   src: url(../fonts/BrandonGrotesque-Regular.woff); }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: #ffffff;
+  font-family: "Brandon-light";
+  background: rgba(0, 0, 0, 0.95);
+  z-index: -2;
+  opacity: 0;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
+  .popup h2 {
+    font-size: 6vw; }
+  .popup p {
+    font-size: 3vw; }
+  .popupActive {
+    z-index: 2;
+    opacity: 1; }
+  .popup__close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.6; }
+  .popup__close:hover {
+    opacity: 1; }
+  .popup__close:before, .popup__close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background: #aaaaaa; }
+  .popup__close:before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .popup__close:after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -134,6 +193,9 @@ header {
     border-radius: 50%;
     border: 2px solid #ffffff;
     margin: 0 5px; }
+    .team .icon i {
+      height: 16px;
+      width: 16px; }
 
 .employee__name, .employee__position {
   letter-spacing: -0.25px;
@@ -156,7 +218,7 @@ footer {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 100px;
+  padding: 100px 20px 0;
   background: #7690c5;
   color: #ffffff; }
   footer form, footer .contact {
@@ -273,7 +335,9 @@ footer {
       -ms-flex-pack: center;
           justify-content: center; }
   .icon i {
-    display: inline-block; }
+    display: inline-block;
+    height: 20px;
+    width: 20px; }
   .icon-tw:hover {
     background: #00aced;
     border-color: #00aced; }
@@ -286,6 +350,18 @@ footer {
   .icon-gl:hover {
     background: #d95232;
     border-color: #d95232; }
+  .icon-facebook {
+    background-image: url("../img/icon/facebook.svg"); }
+  .icon-twitter {
+    background-image: url("../img/icon/twitter.svg"); }
+  .icon-google {
+    background-image: url("../img/icon/google.svg"); }
+  .icon-pinterest {
+    background-image: url("../img/icon/icon.svg"); }
+  .icon-mobile {
+    background-image: url("../img/icon/mobile.svg"); }
+  .icon-mail {
+    background-image: url("../img/icon/mail.svg"); }
 
 @-webkit-keyframes buttonHover {
   from {
@@ -309,42 +385,6 @@ footer {
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
-.icon-facebook {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: url("../img/icon/facebook.svg") no-repeat center; }
-
-.icon-twitter {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: url("../img/icon/twitter.svg") no-repeat center; }
-
-.icon-google {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: url("../img/icon/google.svg") no-repeat center; }
-
-.icon-pinterest {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: url("../img/icon/icon.svg") no-repeat center; }
-
-.icon-mobile {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: url("../img/icon/mobile.svg") no-repeat center; }
-
-.icon-mail {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: url("../img/icon/mail.svg") no-repeat center; }
-
 @media screen and (max-width: 768px) {
   header p {
     font-size: 2.7rem; }
@@ -355,8 +395,10 @@ footer {
     width: 150px; }
   footer form {
     margin-bottom: 30px; }
-  footer .contact__list div {
-    margin-bottom: 10px; } }
+  footer .contact__list {
+    margin-bottom: 30px; }
+    footer .contact__list div {
+      margin-bottom: 10px; } }
 
 @media screen and (max-width: 568px) {
   html {

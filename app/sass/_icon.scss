@@ -1,0 +1,41 @@
+.icon{
+  @include d-flex-center;
+  i{
+    @include icon-img;
+  }
+
+  &-tw:hover {
+    background: #00aced;
+    border-color: #00aced;
+  }
+  &-fb:hover {
+    background: #3b5998;
+    border-color: #3b5998;
+  }
+  &-pi:hover {
+    background: #cb2028;
+    border-color: #cb2028;
+  }
+  &-gl:hover {
+    background: #d95232;
+    border-color: #d95232;
+  }
+  &-facebook {
+    background-image: url("../img/icon/facebook.svg"); //background: url("../img/icon/facebook.svg") no-repeat center;
+  }
+  &-twitter {
+    background-image: url("../img/icon/twitter.svg"); //background: url("../img/icon/twitter.svg") no-repeat center;
+  }
+  &-google {
+    background-image: url("../img/icon/google.svg"); //background: url("../img/icon/google.svg") no-repeat center;
+  }
+  &-pinterest {
+    background-image: url("../img/icon/icon.svg");//background: url("../img/icon/icon.svg") no-repeat center;
+  }
+  &-mobile {
+    background-image: url("../img/icon/mobile.svg");
+  }
+  &-mail {
+    background-image: url("../img/icon/mail.svg");
+  }
+}
